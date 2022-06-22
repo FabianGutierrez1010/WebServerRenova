@@ -16,7 +16,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'deploy 2'
+                echo 'deploy'
+                script {
+                    bat "docker run -p 5050:5000 -d fabiangg/renova_cont:1.0.${BUILD_ID}"
+                }
             }
         }
     }
