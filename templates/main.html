@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="main-div">
+        <img src="../static/images/renova-cen.png">
+        <div id="loading">
+            <img id="imgload" src="../static/images/loading.gif">
+        </div>
+        <form action="" method="post" id="content">
+            <label for="fecha">Seleccionar mes a procesar:</label>
+            <input type="month" name="fecha" id="fecha" value="2021-01" min="2021-01" required>
+            <label for="access path">Ruta de la base de datos access:</label>
+            <input type="text" name="access path" id="access path" placeholder=" Ej: C:Dir1/dir2/data_base.accdb" required>
+            <label for="bernc path">Ruta del balance ERNC:</label>
+            <input type="text" name="bernc path" id="bernc path" placeholder=" Ej: C:Dir1/dir2/bernc.xlsx" required>
+            <label for="dicc path">Ruta del Diccionario:</label>
+            <input type="text" name="dicc path" id="dicc path" placeholder=" Ej: C:Dir1/dir2/dicc.xlsx" required>
+            <label for="dec last month path">Ruta de los decimales del mes anterior:</label>
+            <input type="text" name="dec last month path" id="dec last month path" placeholder=" Ej: C:Dir1/dir2/dec_mes_anterior.xlsx" required>
+            <input class="button" type="submit" value="PROCESAR" onclick="loading()">
+        </form>
+    </div>
+{% endblock %}

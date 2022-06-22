@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="main-div">
+        <img src="../static/images/renova-cen.png">
+        <div id="result">
+            <h2>Se han generado correctamente los archivos para la fecha {{fecha}}</h2>
+            <a href="{{url_for('main')}}">Volver</a>
+        </div>
+    </div>
+{% endblock %}
