@@ -8,8 +8,6 @@ pipeline {
                     bat "py -m unittest discover -v"
                 }
             }
-        }
-        
-        
+        }   
     }
 }
