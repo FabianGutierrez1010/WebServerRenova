@@ -3,24 +3,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo 'build'
-                script {
-                    bat "docker image build -t fabiangg/renova_cont:1.0.${BUILD_ID} ."
-                }
-            }
-        }
-        stage('Test'){
-            steps {
                 echo 'test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'deploy'
                 script {
-                    bat "docker run -p 5050:5000 -d fabiangg/renova_cont:1.0.${BUILD_ID}"
+                    bat "py -m unittest discover -v"
                 }
             }
         }
+        
+        
     }
 }
