@@ -18,11 +18,12 @@ pipeline {
                     sh "python -m unittest discover -v"
                     sh "exit"
                 }
+                echo 'llego hasta aca'
             }
         }
         stage('Deploy') { 
             steps { 
-                echo 'test'
+                echo 'deploy'
             }
         }   
     }
