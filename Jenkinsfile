@@ -8,9 +8,7 @@ pipeline {
                     bat "docker build -t fabiangg/renova_cont:1.0.${BUILD_ID} ."
                 }
             }
-        }   
-    }
-    stages {
+        }
         stage('Test') { 
             steps { 
                 echo 'try enter the container'
@@ -26,6 +24,6 @@ pipeline {
             steps { 
                 echo 'test'
             }
-        } 
+        }   
     }
 }
