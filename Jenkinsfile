@@ -14,7 +14,7 @@ pipeline {
             steps { 
                 echo 'run container test'
                 script {
-                    bat "docker run --name renovaTest${BUILD_ID} -d fabiangg/test:1.0.${BUILD_ID}"
+                    bat "docker run --name renovaTest${BUILD_ID} fabiangg/test:1.0.${BUILD_ID}"
                     // bat "docker exec -i renova${BUILD_ID} /bin/sh"
                     // echo 'version dentro del container'
                     // bat "docker exec --workdir /app renova${BUILD_ID} python --version"
