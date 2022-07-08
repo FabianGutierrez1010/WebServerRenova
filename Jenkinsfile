@@ -36,4 +36,15 @@ pipeline {
             }   
         }
     }
+    post { 
+        always { 
+            echo 'me ejecutare siempre'
+        }
+        success {
+            echo 'me ejecutare si todo sale bien'
+        }
+        failure {
+            echo 'me ejecutare si algo sale mal'
+        }
+    }
 }
