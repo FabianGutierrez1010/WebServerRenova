@@ -4,4 +4,4 @@ COPY . .
 RUN pip install -r requirements.txt
 # EXPOSE 5000
 ENTRYPOINT [ "python" ]
-CMD [ "-m unittest discover -v" ]
+CMD [ "-m","unittest","discover","-v" ]
