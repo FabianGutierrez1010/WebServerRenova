@@ -13,8 +13,8 @@ pipeline {
             steps { 
                 echo 'try enter the container'
                 script {
-                    bat "docker run -p 5050:5000 -d fabiangg/renova_cont:1.0.${BUILD_ID}"
-                    bat "docker exec -i a8af636ada32 /bin/sh"
+                    bat "docker run --name renova -p 5050:5000 -d fabiangg/renova_cont:1.0.${BUILD_ID}"
+                    bat "docker exec -it renova /bin/sh"
                     sh "python -m unittest discover -v"
                     sh "exit"
                 }
